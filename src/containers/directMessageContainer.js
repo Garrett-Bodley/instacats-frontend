@@ -1,6 +1,6 @@
 import React from 'react';
 
-const directMessageContainer = () => {
+const DirectMessageContainer = () => {
   return(
     <div>
 
@@ -8,4 +8,4 @@ const directMessageContainer = () => {
   )
 }
 
-export default directMessageContainer
+export default DirectMessageContainer

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const authContainer = () => {
+const AuthContainer = () => {
   return(
     <div>
 
@@ -8,4 +8,4 @@ const authContainer = () => {
   )
 }
 
-export default authContainer
+export default AuthContainer

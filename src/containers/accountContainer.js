@@ -1,6 +1,6 @@
 import React from 'react';
 
-const accountContainer = () => {
+const AccountContainer = () => {
   return(
     <div>
 
@@ -8,4 +8,4 @@ const accountContainer = () => {
   )
 }
 
-export default accountContainer
+export default AccountContainer

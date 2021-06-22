@@ -1,6 +1,6 @@
 import React from 'react';
 
-const exploreContainer = () => {
+const ExploreContainer = () => {
   return(
     <div>
 
@@ -8,4 +8,4 @@ const exploreContainer = () => {
   )
 }
 
-export default exploreContainer
+export default ExploreContainer
