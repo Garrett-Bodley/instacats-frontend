@@ -1,29 +1,29 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from '../../Instacats_logo.png'
-import IconContainer from './IconContainer'
-import SearchContainer from './SearchContainer'
+import LogoContainer from './LogoContainer';
+import IconContainer from './IconContainer';
+import SearchContainer from './SearchContainer';
 import '../../css/navbar.css';
 
+const Nav = styled.nav`
+  display: flex;
+  background-color: #fafafa;
+  padding: 0;
+  position: relative;
+  height: 54px;
+`
+
+const Spacer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+  height: 55px
+`
+
 const NavbarContainer = () => {
-
-  const Nav = styled.nav`
-    display: flex;
-    background-color: #fafafa;
-    padding: 0;
-    position: relative;
-    height: 54px;
-  `
-
-  const Spacer = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 0 20px;
-    height: 55px
-  `
 
   return(
     <Nav>
