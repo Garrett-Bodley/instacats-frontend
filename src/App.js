@@ -6,7 +6,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import NavbarContainer from './containers/NavbarContainer';
+import NavbarContainer from './containers/navbar/NavbarContainer';
 
 function App() {
   return (
