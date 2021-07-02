@@ -7,10 +7,11 @@ import '../../css/navbar.css';
 
 const Nav = styled.nav`
   display: flex;
-  background-color: #fafafa;
+  background-color: #fff;
   padding: 0;
   position: relative;
   height: 54px;
+  border-bottom: 1px solid #dbdbdb;
 `
 
 const Spacer = styled.div`
