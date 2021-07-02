@@ -8,7 +8,7 @@ const NavbarIcon = styled.svg.attrs(props => ({
     width: "22"
   }))`
     display: block;
-    margin: 0 0.25em;
+    margin: 0 4px;
     position: relative;
   `
 
