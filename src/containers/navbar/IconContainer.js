@@ -14,8 +14,18 @@ const Container = styled.div`
 const IconWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
   padding-left: 24px;
   white-space: nowrap
+`
+
+const Avatar = styled.i`
+  height: 22px;
+  width: 22px;
+  display: inline-block;
+  font-size: 22px;
+  margin: 0 4px;
+  text-align: center;
 `
 
 const IconContainer = () => {
@@ -27,6 +37,7 @@ const IconContainer = () => {
         <DirectMessages/>
         <Explore/>
         <ActivityFeed/>
+        <Avatar className="bi bi-person-circle"/>
       </IconWrapper>
     </Container>
   )
