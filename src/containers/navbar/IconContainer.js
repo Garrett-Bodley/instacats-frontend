@@ -31,7 +31,7 @@ const Avatar = styled.i`
 const IconContainer = () => {
 
   return (
-    <Container className="icon-container">
+    <Container id="icon-container">
       <IconWrapper>
         <Home />
         <DirectMessages/>

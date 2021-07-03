@@ -60,9 +60,14 @@ const SearchContainer = () => {
     setQuery(e.target.value)
   }
 
+  const handleOnClick = (e) => {
+    document.getElementById('search-input').focus()
+    debugger
+  }
+
   return(
-    <Wrapper className="search-container">
-      <Input onChange={handleQueryChange} value={query} ></Input>
+    <Wrapper onClick={handleOnClick} id="search-container">
+      <Input id="search-input" onChange={handleQueryChange} value={query} ></Input>
       <IconWrapper>
         <SearchIcon className="bi bi-search"></SearchIcon>
         <DefaultText>Search</DefaultText>

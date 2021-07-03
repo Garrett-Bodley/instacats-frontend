@@ -14,7 +14,7 @@ const Container = styled.div`
 const LogoContainer = () => {
 
   return(
-    <Container className="search-container">
+    <Container id="logo-container">
       <img alt="Instacats Logo" aria-label="Instacats" src={logo} />
     </Container>
   )
