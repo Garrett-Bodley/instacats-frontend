@@ -40,7 +40,7 @@ export const Explore = () => {
 
   return(
     <NavbarIcon aria-label="Find People">
-      <path clip-rule="evenodd" fill-rule="evenodd" d={draw}></path>
+      <path clipRule="evenodd" fillRule="evenodd" d={draw}></path>
     </NavbarIcon>
   )
 }
