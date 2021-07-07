@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useState } from 'react';
+import SearchIcon from '../../components/icons/SearchIcon'
 
-const Wrapper = styled.div`
+const Div = styled.div`
   display:flex;
   flex-basis: 0 1 auto;
   position: relative;
   justify-content: center;
   align-items: center;
-  flex 0 1 auto;
+  flex: 0 1 auto;
   height: 28px;
   min-width: 125px;
   width: 215px;
@@ -17,12 +18,11 @@ const Wrapper = styled.div`
 const Input = styled.input`
   width: 100%;
   height: 100%;
-  color: #8e8e8e;
+  color: #fafafa;
   position: absolute;
   border-radius: 3px;
   border: solid 1px #dbdbdb;
   background: #fafafa;
-  font-size: 14px
 `
 
 const IconWrapper = styled.div`
@@ -37,7 +37,7 @@ const IconWrapper = styled.div`
   box-sizing: border-box;
 `
 
-const DefaultText = styled.span`
+const Span = styled.span`
   display: inline-block;
   max-width: 140px;
   display: inline-block;
@@ -45,34 +45,30 @@ const DefaultText = styled.span`
   font-size: 14px;
 `
 
-const SearchIcon = styled.i`
-  color: #8e8e8e;
-  display: inline-block;
-  font-size: 14px;
-  padding: 0 4px 0 0
-`
-
 const SearchContainer = () => {
 
-  const [query, setQuery] = useState("")
+  const [query, setQuery] = useState("Search")
+  const [isHidden, setIsHidden] = useState(false)
 
   const handleQueryChange = (e) => {
     setQuery(e.target.value)
   }
 
-  const handleOnClick = (e) => {
-    document.getElementById('search-input').focus()
-    debugger
-  }
-
   return(
-    <Wrapper onClick={handleOnClick} id="search-container">
-      <Input id="search-input" onChange={handleQueryChange} value={query} ></Input>
-      <IconWrapper>
-        <SearchIcon className="bi bi-search"></SearchIcon>
-        <DefaultText>Search</DefaultText>
+    <Div id="search-container" className="search-container">
+      <Input 
+        id="search-input" 
+        className="search-input" 
+        onChange={handleQueryChange} 
+        value={query}
+      />
+      <IconWrapper id="icon-wrapper" className="icon-wrapper">
+        <div hidden={isHidden}>
+          <SearchIcon className="bi bi-search"></SearchIcon>
+          <Span>{query}</Span>
+        </div>
       </IconWrapper>
-    </Wrapper>
+    </Div>
   )
 
 }
