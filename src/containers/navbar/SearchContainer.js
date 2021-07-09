@@ -82,8 +82,12 @@ const SearchContainer = () => {
 
   const handleOnClick = () => {
     setIsFocused(true);
-    if(query === "Search"){ setQuery("") };
-    inputRef.current.focus();
+    if(query === "Search"){
+       setQuery("") 
+       inputRef.current.focus();
+    }else{
+      inputRef.current.select()
+    };
   }
 
   const handleXCircleClick = () => {
@@ -92,7 +96,11 @@ const SearchContainer = () => {
     inputRef.current.blur()
   }
 
-  const handleOnBlur = (e) => {
+  const preventBlur = (e) => {
+    e.preventDefault()
+  }
+
+  const handleOnBlur = () => {
     if(query === ""){ setQuery("Search") };
     setIsFocused(false)
   }
@@ -103,6 +111,7 @@ const SearchContainer = () => {
         id="search-input" 
         className="search-input" 
         onChange={handleQueryChange} 
+        onBlur={handleOnBlur}
         value={query}
         ref={inputRef}
         autoComplete="off"
@@ -111,7 +120,7 @@ const SearchContainer = () => {
       {isFocused ? 
         <>
           <LeftSearchIcon className="bi bi-search" />
-          <RightSearchIcon onClick={handleXCircleClick} className="bi bi-x-circle-fill"/>
+          <RightSearchIcon onMouseDown={preventBlur} onClick={handleXCircleClick} className="bi bi-x-circle-fill"/>
         </> : 
         <IconWrapper id="icon-wrapper" className="icon-wrapper" onClick={handleOnClick}>
           <SearchIcon className="bi bi-search"/>
