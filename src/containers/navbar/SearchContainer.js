@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { useState, useRef } from 'react';
 import SearchIcon from '../../components/icons/SearchIcon'
-// import '../../css/navbar.css';
 
 const Div = styled.div`
   display: flex;
@@ -20,26 +19,39 @@ const Div = styled.div`
 const Input = styled.input`
   width: 100%;
   height: 100%;
-  color: #fafafa;
-  font-size: 15px;
+  color: #262626;
+  font-size: 14px;
   position: absolute;
   outline: 0;
   border-radius: 3px;
   border: solid 1px #dbdbdb;
+  line-height: 18px;
   padding: 3px 10px 3px 24px;
   background: #fafafa;
 `
 
-const IconWrapper = styled.div`
+const IconOuterWrapper = styled.div`
   position: absolute;
-  left: -4px;
-  width: 100%;
-  height: 100%;
+  width: 215px;
+  height: 28px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
   justify-content: center;
   padding: 0 15px;
   box-sizing: border-box;
+  background: #fafafa;
+  border-radius: 3px;
+  border: solid 1px #dbdbdb;
+`
+
+const IconInnerWrapper = styled.div`
+  position: relative;
+  left: -5px;
+  display: block;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
 `
 
 const Span = styled.span`
@@ -51,11 +63,11 @@ const Span = styled.span`
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 14px;
+  vertical-align: middle;
 `
 
 const LeftSearchIcon = styled(SearchIcon)`
   position: absolute;
-  font-size: 10px;
   left: 11px;
   top: 8px;
   z-index: 2;
@@ -111,21 +123,22 @@ const SearchContainer = () => {
         id="search-input" 
         className="search-input" 
         onChange={handleQueryChange} 
-        onBlur={handleOnBlur}
         value={query}
         ref={inputRef}
+        onBlur={handleOnBlur}
         autoComplete="off"
-        style={{color: isFocused ? "#262626" : "#fafafa"}}
       />
       {isFocused ? 
         <>
           <LeftSearchIcon className="bi bi-search" />
           <RightSearchIcon onMouseDown={preventBlur} onClick={handleXCircleClick} className="bi bi-x-circle-fill"/>
         </> : 
-        <IconWrapper id="icon-wrapper" className="icon-wrapper" onClick={handleOnClick}>
-          <SearchIcon className="bi bi-search"/>
-          <Span>{query}</Span>
-        </IconWrapper>
+        <IconOuterWrapper id="icon-wrapper" className="icon-wrapper" onClick={handleOnClick}>
+          <IconInnerWrapper>
+            <SearchIcon className="bi bi-search"/>
+            <Span>{query}</Span>
+          </IconInnerWrapper>
+        </IconOuterWrapper>
       }
     </Div>
   )
@@ -133,3 +146,4 @@ const SearchContainer = () => {
 }
 
 export default SearchContainer
+
