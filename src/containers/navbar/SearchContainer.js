@@ -7,13 +7,14 @@ const Div = styled.div`
   display: flex;
   flex-direction: column;
   flex-basis: 0 1 auto;
+  flex: 0 1 auto;
   position: relative;
   justify-content: center;
   align-items: center;
-  flex: 0 1 auto;
   height: 28px;
   min-width: 125px;
   width: 215px;
+  cursor: text;
 `
 
 const Input = styled.input`
@@ -64,6 +65,7 @@ const Span = styled.span`
   text-overflow: ellipsis;
   font-size: 14px;
   vertical-align: middle;
+  cursor: default;
 `
 
 const LeftSearchIcon = styled(SearchIcon)`
@@ -71,6 +73,7 @@ const LeftSearchIcon = styled(SearchIcon)`
   left: 11px;
   top: 8px;
   z-index: 2;
+  cursor: default;
 `
 
 const RightSearchIcon = styled(SearchIcon)`
@@ -80,6 +83,7 @@ const RightSearchIcon = styled(SearchIcon)`
   right: 5px;
   top: 6px;
   z-index: 3;
+  cursor: default;
 `
 
 const SearchContainer = () => {
@@ -130,7 +134,7 @@ const SearchContainer = () => {
       />
       {isFocused ? 
         <>
-          <LeftSearchIcon className="bi bi-search" />
+          <LeftSearchIcon className="bi bi-search" onMouseDown={preventBlur} />
           <RightSearchIcon onMouseDown={preventBlur} onClick={handleXCircleClick} className="bi bi-x-circle-fill"/>
         </> : 
         <IconOuterWrapper id="icon-wrapper" className="icon-wrapper" onClick={handleOnClick}>
