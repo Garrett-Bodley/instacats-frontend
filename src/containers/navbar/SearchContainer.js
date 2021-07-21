@@ -95,8 +95,8 @@ const SearchContainer = () => {
   const handleOnClick = () => {
     setIsFocused(true);
     if(query === "Search"){
-       setQuery("") 
-       inputRef.current.focus();
+      setQuery("") 
+      inputRef.current.focus();
     }else{
       inputRef.current.select()
     };
