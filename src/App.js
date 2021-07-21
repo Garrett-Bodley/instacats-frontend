@@ -2,9 +2,9 @@ import React from 'react'
 import './css/App.css';
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
+  // Switch,
+  // Route,
+  // Link
 } from "react-router-dom";
 import NavbarContainer from './containers/navbar/NavbarContainer';
 
