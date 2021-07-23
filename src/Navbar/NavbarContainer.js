@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import LogoContainer from './LogoContainer';
 import IconContainer from './IconContainer';
 import SearchContainer from './SearchContainer';
-import '../../css/navbar.css';
+import './navbar.css';
 
 const Nav = styled.nav`
   display: flex;

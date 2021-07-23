@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Home, Explore, ActivityFeed, DirectMessages} from '../../components/icons/navbarIcons'
+import {Home, Explore, ActivityFeed, DirectMessages} from '../Icons/navbarIcons'
 
 const Container = styled.div`
   display: flex;

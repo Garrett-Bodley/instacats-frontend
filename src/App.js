@@ -1,19 +1,20 @@
 import React from 'react'
-import './css/App.css';
 import {
   BrowserRouter as Router,
   // Switch,
   // Route,
   // Link
 } from "react-router-dom";
-import NavbarContainer from './containers/navbar/NavbarContainer';
+import NavbarContainer from './Navbar/NavbarContainer';
+import HomeContainer from './Home/HomeContainer'
 
 function App() {
   return (
     <Router>
-      <NavbarContainer />
-        <div className="App">
-        </div>
+      <div className="App">
+        <NavbarContainer />
+        <HomeContainer />
+      </div>
     </Router>
   );
 }

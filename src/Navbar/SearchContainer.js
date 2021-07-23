@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useState, useRef } from 'react';
-import SearchIcon from '../../components/icons/SearchIcon'
+import SearchIcon from '../Icons/SearchIcon'
 
 const Div = styled.div`
   display: flex;
