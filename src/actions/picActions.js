@@ -1,4 +1,4 @@
-const PIC_URL = "https://localhost:3000"
+const PIC_URL = "http://localhost:3001/pictures"
 
 export const getPics = () => {
   const configObj = {
