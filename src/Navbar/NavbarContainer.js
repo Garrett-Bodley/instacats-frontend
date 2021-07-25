@@ -11,6 +11,7 @@ const Nav = styled.nav`
   padding: 0;
   position: relative;
   height: 54px;
+  width: 100%;
   border-bottom: 1px solid #dbdbdb;
 `
 
