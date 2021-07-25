@@ -9,7 +9,14 @@ export const getPics = () => {
     }
   }
 
-  fetch(PIC_URL, configObj).then(resp => resp.json()).then(json => {
-    debugger
-  })
+  return dispatch => {
+    fetch(PIC_URL + "?page=1", configObj).then(resp => resp.json()).then(json => {
+      debugger
+      dispatch(addPics(json))
+    })
+  }
+}
+
+export const addPics = (pics) => {
+  return {type: 'ADD_PICS', payload: pics}
 }
