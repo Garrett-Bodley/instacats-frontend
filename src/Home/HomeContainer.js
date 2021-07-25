@@ -6,6 +6,13 @@ import styled from 'styled-components';
 
 const Div = styled.div`
   height: 100%;
+  width: 935px;
+  max-width: 935px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  flex-grow: 1;
+  overflow-y: scroll;
 `
 
 const HomeContainer = ({ getPics }) => {
