@@ -1,6 +1,6 @@
 const PIC_URL = "http://localhost:3001/pictures"
 
-export const getPics = () => {
+export const getPicsByPageNum = (pageNum = 1) => {
   const configObj = {
     method: "GET",
     headers: {
@@ -8,10 +8,8 @@ export const getPics = () => {
       'Accept': 'application/json'
     }
   }
-
-  return dispatch => {
-    fetch(PIC_URL + "?page=1", configObj).then(resp => resp.json()).then(json => {
-      debugger
+  return (dispatch) => {
+    fetch(PIC_URL + `?page=${pageNum}`, configObj).then(resp => resp.json()).then(json => {
       dispatch(addPics(json))
     })
   }
