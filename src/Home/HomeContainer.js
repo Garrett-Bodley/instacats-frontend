@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from './Card'
-import { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState, useCallback, useRef } from 'react'
 import { useSelector, useDispatch } from 'react-redux';
 import { getPicsByPageNum } from '../Utilities/Actions/picActions'
 import styled from 'styled-components';
@@ -21,7 +21,7 @@ const FeedContainer = styled.div`
   max-width: 615px;
 `
 
-const HomeContainer = ({ getPicsByPageNum }) => {
+const HomeContainer = () => {
   
   const dispatch = useDispatch()
   const [pageNum, setPageNum] = useState(1)
@@ -30,11 +30,17 @@ const HomeContainer = ({ getPicsByPageNum }) => {
 
   useEffect(() => {
     dispatch(getPicsByPageNum(pageNum));
-  }, [pageNum, getPicsByPageNum, dispatch])
+  }, [pageNum, dispatch])
 
+  const observer = useRef()
   const lastCardRef = useCallback(node => {
-    
-  })
+    if(loading) return
+    if(observer.current) observer.current.disconnect()
+    observer.current = new IntersectionObserver(entries => {
+      if(entries[0].isIntersecting) setPageNum(prevNum => prevNum++)
+    })
+    if(node) observer.current.observe(node)
+  }, [loading])
   
 
   return(
@@ -53,8 +59,4 @@ const HomeContainer = ({ getPicsByPageNum }) => {
   )
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {getPicsByPageNum: () => dispatch(getPicsByPageNum())}
-}
-
-export default connect(null, mapDispatchToProps)(HomeContainer)
+export default HomeContainer
