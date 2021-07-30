@@ -6,10 +6,11 @@ import SearchContainer from './SearchContainer';
 import './navbar.css';
 
 const Nav = styled.nav`
+  position: fixed;
+  top: 0;
   display: flex;
   background-color: #fff;
   padding: 0;
-  position: relative;
   height: 54px;
   width: 100%;
   border-bottom: 1px solid #dbdbdb;
