@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from './Card'
-import { useEffect, useState } from 'react'
-import { connect, useSelector } from 'react-redux';
+import { useEffect, useState, useCallback } from 'react'
+import { useSelector, useDispatch } from 'react-redux';
 import { getPicsByPageNum } from '../Utilities/Actions/picActions'
 import styled from 'styled-components';
 
@@ -21,18 +21,32 @@ const FeedContainer = styled.div`
   max-width: 615px;
 `
 
-const HomeContainer = ({ getPicsByPageNum, pics }) => {
+const HomeContainer = ({ getPicsByPageNum }) => {
   
+  const dispatch = useDispatch()
   const [pageNum, setPageNum] = useState(1)
+  const pics = useSelector(state => state.pics)
+  const loading = useSelector(state => state.loading)
 
   useEffect(() => {
-    getPicsByPageNum(pageNum);
-  }, [pageNum, getPicsByPageNum])
+    dispatch(getPicsByPageNum(pageNum));
+  }, [pageNum, getPicsByPageNum, dispatch])
+
+  const lastCardRef = useCallback(node => {
+    
+  })
+  
 
   return(
     <Div id="home-container">
       <FeedContainer>
-        {pics.map(pic => <Card key={pic.imgur_id} pic={pic}/>)}
+        {pics.map((pic, index) => {
+          if(index === pics.length - 1){
+            return <Card key={pic.imgur_id} ref={lastCardRef} pic={pic}/>
+          }else{
+            return <Card key={pic.imgur_id} pic={pic}/>
+          }
+        })}
       </FeedContainer>
     </Div>
 
@@ -43,8 +57,4 @@ const mapDispatchToProps = (dispatch) => {
   return {getPicsByPageNum: () => dispatch(getPicsByPageNum())}
 }
 
-const mapStateToProps = (state) => ({
-  pics: state.pics
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(HomeContainer)
+export default connect(null, mapDispatchToProps)(HomeContainer)
