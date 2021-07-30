@@ -1,11 +1,12 @@
 export const picReducer = (
   state = {
     pics: [], 
-    dict: {}
+    dict: {},
+    loading: false
   }, action) => {
   switch(action.type){
     case 'ADD_PICS':
-      const newDict = Object.assign({}, state.dict)
+      const newDict = {...state.dict}
       const uniquePics = action.payload.reduce((accumulator, pic) => {
         if(!newDict[pic.imgur_id]){
           newDict[pic.imgur_id] = true;
@@ -13,7 +14,9 @@ export const picReducer = (
         }
         return accumulator
       }, [])
-      return  {pics: [...state.pics, ...uniquePics], dict: newDict}
+      return  {pics: [...state.pics, ...uniquePics], dict: newDict, loading: false}
+    case 'LOADING':
+      return {...state, loading: true}
     default: 
       return state
   }

@@ -9,6 +9,7 @@ export const getPicsByPageNum = (pageNum = 1) => {
     }
   }
   return (dispatch) => {
+    dispatch(loading)
     fetch(PIC_URL + `?page=${pageNum}`, configObj).then(resp => resp.json()).then(json => {
       dispatch(addPics(json))
     })
@@ -17,4 +18,8 @@ export const getPicsByPageNum = (pageNum = 1) => {
 
 export const addPics = (pics) => {
   return {type: 'ADD_PICS', payload: pics}
+}
+
+const loading = () => {
+  return {type: 'LOADING'}
 }
