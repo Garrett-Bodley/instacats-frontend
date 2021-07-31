@@ -11,13 +11,13 @@ const Image = styled.img`
 `
 
 
-const Card = ({ pic }) => {
+const Card = React.forwardRef((props, ref) => {
   
   return (
-    <Article>
-      <Image src={pic.src_url}></Image>
+    <Article ref={ref}>
+      <Image src={props.pic.src_url}></Image>
     </Article>
   )
-}
+})
 
 export default Card
