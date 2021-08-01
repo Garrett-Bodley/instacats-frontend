@@ -1,9 +1,10 @@
 import React from 'react';
-import Card from './Card'
-import { useEffect, useState, useCallback, useRef } from 'react'
-import { useSelector, useDispatch } from 'react-redux';
-import { getPicsByPageNum } from '../Utilities/Actions/picActions'
 import styled from 'styled-components';
+
+import { useSelector } from 'react-redux';
+import useInfiniteScroll from './useInfiniteScroll';
+
+import Card from './Card'
 
 const Div = styled.div`
   height: 100%;
@@ -23,25 +24,8 @@ const FeedContainer = styled.div`
 
 const HomeContainer = () => {
   
-  const dispatch = useDispatch()
-  const [pageNum, setPageNum] = useState(1)
   const pics = useSelector(state => state.pics)
-  const loading = useSelector(state => state.loading)
-
-  useEffect(() => {
-    dispatch(getPicsByPageNum(pageNum));
-  }, [pageNum, dispatch])
-
-  const observer = useRef()
-  const lastCardRef = useCallback(node => {
-    if(loading) return
-    if(observer.current) observer.current.disconnect()
-    observer.current = new IntersectionObserver(entries => {
-      if(entries[0].isIntersecting) setPageNum(prevNum => prevNum++)
-    })
-    if(node) observer.current.observe(node)
-  }, [loading])
-  
+  const { loading, lastCardRef } = useInfiniteScroll()
 
   return(
     <Div id="home-container">
@@ -53,6 +37,7 @@ const HomeContainer = () => {
             return <Card key={pic.imgur_id} pic={pic}/>
           }
         })}
+        {loading && <div>Loading</div>}
       </FeedContainer>
     </Div>
 
