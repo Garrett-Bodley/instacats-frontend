@@ -10,12 +10,21 @@ const Image = styled.img`
   height: auto;
 `
 
+const Video = styled.video`
+  max-width: 100%;
+  height: auto;
+`
+
 
 const Card = React.forwardRef((props, ref) => {
   
   return (
     <Article ref={ref}>
-      <Image src={props.pic.src_url}></Image>
+      {!props.pic.animated ? <Image src={props.pic.src_url} /> 
+        : <Video controls autoplay>
+            <source src={props.pic.src_url} type="video/mp4"></source>
+          </Video>
+      }
     </Article>
   )
 })
