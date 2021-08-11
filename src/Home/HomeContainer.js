@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { useSelector } from 'react-redux';
-import useInfiniteScroll from './useInfiniteScroll';
+import { useSelector, useDispatch } from 'react-redux';
+import { useState, useRef, useEffect, useCallback } from 'react'
+import { getPicsByPageNum } from '../Utilities/Actions/picActions'
 
 import Card from './Card'
 
@@ -25,8 +26,25 @@ const FeedContainer = styled.div`
 const HomeContainer = () => {
   
   const pics = useSelector(state => state.pics)
-  const { loading, lastCardRef } = useInfiniteScroll()
+  const loading = useSelector(state => state.loading)
+  const [pageNum, setPageNum] = useState(1)
 
+  const dispatch = useDispatch()
+  const observer = useRef()
+
+  const lastCardRef = useCallback(node => {
+    if(loading) return;
+    if(observer.current) observer.current.disconnect();
+    observer.current = new IntersectionObserver( (entries) => {
+      if(entries[0].isIntersecting){ setPageNum(prevNum => prevNum + 1) }
+    });
+    if(node) observer.current.observe(node)
+  }, [loading])
+
+  useEffect(() => {
+    dispatch(getPicsByPageNum(pageNum));
+  }, [pageNum, dispatch])
+  
   return(
     <Div id="home-container">
       <FeedContainer>
