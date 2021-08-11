@@ -4,7 +4,6 @@ export const getPicsByPageNum = (pageNum = 1) => {
   const configObj = {
     method: "GET",
     headers: {
-      'Content-Type': 'application/json',
       'Accept': 'application/json'
     }
   }
