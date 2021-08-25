@@ -11,7 +11,10 @@ const Div = styled.div`
   width: 935px;
   max-width: 935px;
   display: flex;
+  order: 4;
+  padding-top: 30px;
   align-items: center;
+  background-color: #fafafa;
   flex-direction: column;
   flex-shrink: 0;
   flex-grow: 1;
