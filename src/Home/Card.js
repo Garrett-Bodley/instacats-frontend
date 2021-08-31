@@ -7,7 +7,9 @@ const Article = styled.article`
   margin-bottom: 24px;
   border: 1px solid rgb(219, 219, 219)
   border-radius: 3px;
-`
+  background-color: rgb(255, 255, 255);
+  color: rgb(38, 38, 38);
+`;
 
 const Header = styled.header`
   height: 60px;
