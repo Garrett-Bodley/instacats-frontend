@@ -18,7 +18,8 @@ const Header = styled.header`
   flex-direction: row;
   align-items: center;
   background-color: #fff;
-  border-bottom: 1px solid rgb(219, 219, 219);
+  border-bottom: 1px solid rgb(239, 239, 239);
+  border-radius: 3px 3px 0px 0px;
   font-size: 14px;
   font-weight: 600;
 `
