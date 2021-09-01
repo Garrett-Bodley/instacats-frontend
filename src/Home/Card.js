@@ -24,7 +24,7 @@ const Header = styled.header`
   font-weight: 600;
 `;
 
-const UsernameContainer = styled.div`
+const UsernameContainer = styled.span`
   font-size: 14px;
   font-weight: 600;
   padding-left: 15px;
