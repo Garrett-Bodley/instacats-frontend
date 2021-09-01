@@ -47,7 +47,12 @@ const BookmarkButtonWrapper = styled.span`
   margin-right: -10px;
 `;
 
-const IconBar = styled.section``;
+const LikesDisplay = styled.section`
+
+`
+
+const Comments = styled.div`
+`
 
 const Card = React.forwardRef((props, ref) => {
   return (
