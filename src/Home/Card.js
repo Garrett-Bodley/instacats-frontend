@@ -28,6 +28,23 @@ const UsernameContainer = styled.div`
   font-size: 14px;
   font-weight: 600;
   padding-left: 15px;
+  cursor: pointer;
+`;
+
+const IconBar = styled.section`
+  display: flex;
+  align-items: stretch;
+  flex-direction: row;
+  padding-top: 4px;
+  padding-right: 16px;
+  padding-left: 16px;
+  flex-shrink: 0;
+`;
+
+const BookmarkButtonWrapper = styled.span`
+  display: block;
+  margin-left: auto;
+  margin-right: -10px;
 `;
 
 const IconBar = styled.section``;
@@ -40,7 +57,14 @@ const Card = React.forwardRef((props, ref) => {
         <UsernameContainer>{props.pic.user}</UsernameContainer>
       </Header>
       <Content pic={props.pic} />
-      Section
+      <IconBar>
+        <LikeButton />
+        <CommentButton />
+        <ShareButton />
+        <BookmarkButtonWrapper>
+          <BookmarkButton />
+        </BookmarkButtonWrapper>
+      </IconBar>
     </Article>
   );
 });
