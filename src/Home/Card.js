@@ -2,6 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import Content from "./Content";
 import Avatar from "../Icons/Avatar";
+import {
+  LikeButton,
+  CommentButton,
+  ShareButton,
+  BookmarkButton,
+} from "../Icons/cardIcons";
 
 const Article = styled.article`
   margin-bottom: 24px;
