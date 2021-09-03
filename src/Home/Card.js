@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Content from "./Content";
 import Avatar from "../Icons/Avatar";
+import LikesSection from './LikesSection'
 import {
   LikeButton,
   CommentButton,
@@ -53,9 +54,6 @@ const BookmarkButtonWrapper = styled.span`
   margin-right: -10px;
 `;
 
-const LikesDisplay = styled.section`
-
-`
 
 const Comments = styled.div`
 `
@@ -76,6 +74,7 @@ const Card = React.forwardRef((props, ref) => {
           <BookmarkButton />
         </BookmarkButtonWrapper>
       </IconBar>
+      <LikesSection likes={props.pic.likes} />
     </Article>
   );
 });
