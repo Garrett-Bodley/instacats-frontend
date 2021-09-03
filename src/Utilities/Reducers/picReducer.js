@@ -14,7 +14,7 @@ export const picReducer = (
         }
         return accumulator
       }, [])
-      return  {pics: [...state.pics, ...uniquePics], dict: newDict, loading: false}
+      return  {...state, pics: [...state.pics, ...uniquePics], dict: newDict, loading: false}
     case 'LOADING':
       return {...state, loading: true}
     default: 
