@@ -5,6 +5,7 @@ const Avi = styled(PersonCircle)`
   color: #dbdbdb;
   height: 32px;
   width: 32px;
+  cursor: pointer;
 `;
 
 const Avatar = () => {
