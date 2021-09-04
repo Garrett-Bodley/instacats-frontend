@@ -55,10 +55,6 @@ const BookmarkButtonWrapper = styled.span`
   margin-right: -10px;
 `;
 
-
-const Comments = styled.div`
-`
-
 const Card = React.forwardRef((props, ref) => {
   return (
     <Article ref={ref}>
