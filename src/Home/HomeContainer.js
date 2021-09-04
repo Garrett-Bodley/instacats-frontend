@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { useSelector } from 'react-redux';
 import useInfiniteScroll from './useInfiniteScroll';
 
-import Card from './Card'
+import Card from './Card/Card'
 
 const Div = styled.div`
   height: 100%;
