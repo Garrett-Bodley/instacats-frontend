@@ -12,32 +12,30 @@ const Section = styled.section`
 const Bold = styled.span`
   font-size: 14px;
   font-weight: 600;
-`
+`;
 
 const LikesSection = ({ likes }) => {
   const renderMessage = (likes) => {
-    if(!likes) return null;
-    if(likes.length === 0){
-      return null
-    }else if(likes.length === 1){
+    if (!likes) return null;
+    if (likes.length === 0) {
+      return null;
+    } else if (likes.length === 1) {
       return (
         <span>
           Liked by <Bold>{`${likes[0].user.username}`}</Bold>
-        </span>)
-    }else if(likes.length > 1){
+        </span>
+      );
+    } else if (likes.length > 1) {
       return (
         <span>
-          Liked by <Bold>{`${likes[0].user.username}`}</Bold> and <Bold>others</Bold>
+          Liked by <Bold>{`${likes[0].user.username}`}</Bold> and{" "}
+          <Bold>others</Bold>
         </span>
-      )
+      );
     }
-  }
+  };
 
-  return (
-  <Section>
-    {renderMessage(likes)}
-  </Section>
-  );
+  return <Section>{renderMessage(likes)}</Section>;
 };
 
-export default LikesSection
+export default LikesSection;
