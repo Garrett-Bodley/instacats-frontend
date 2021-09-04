@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import Content from "./Content";
 import Avatar from "../../Icons/Avatar";
-import LikesSection from './LikesSection'
+import LikesSection from "./LikesSection";
+import Description from "./Description";
 import {
   LikeButton,
   CommentButton,
@@ -75,6 +76,7 @@ const Card = React.forwardRef((props, ref) => {
         </BookmarkButtonWrapper>
       </IconBar>
       <LikesSection likes={props.pic.likes} />
+      <Description pic={props.pic} />
     </Article>
   );
 });
