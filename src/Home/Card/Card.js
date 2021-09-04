@@ -63,7 +63,7 @@ const Card = React.forwardRef((props, ref) => {
     <Article ref={ref}>
       <Header>
         <Avatar />
-        <UsernameContainer>{props.pic.user}</UsernameContainer>
+        <UsernameContainer>{props.pic.user.username}</UsernameContainer>
       </Header>
       <Content pic={props.pic} />
       <IconBar>
