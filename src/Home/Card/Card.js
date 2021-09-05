@@ -72,7 +72,7 @@ const Card = React.forwardRef((props, ref) => {
         </BookmarkButtonWrapper>
       </IconBar>
       <LikesSection likes={props.pic.likes} />
-      <Description pic={props.pic} />
+      {props.pic.description.length !== 0 && <Description pic={props.pic} />}
     </Article>
   );
 });
