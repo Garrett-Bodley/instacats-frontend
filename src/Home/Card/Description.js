@@ -35,7 +35,7 @@ const Description = ({ pic }) => {
       pic.description.match(/\n/)
     ) {
       setIsTruncated(true);
-      let truncatedDesc = ""
+      let truncatedDesc = "";
       const words = pic.description.split(/(?= )|(?=\n)|(?=$)/);
       let i = 0;
       while (
@@ -46,9 +46,9 @@ const Description = ({ pic }) => {
         truncatedDesc += words[i];
         i++;
       }
-      setRenderedDesc(truncatedDesc)
+      setRenderedDesc(truncatedDesc);
     } else {
-      setRenderedDesc(pic.description)
+      setRenderedDesc(pic.description);
     }
   }, [pic]);
 
