@@ -26,7 +26,7 @@ const Button = styled.button`
 
 const Description = ({ pic }) => {
   const [isTruncated, setIsTruncated] = useState(false);
-  const renderedDesc = useRef("");
+  const [renderedDesc, setRenderedDesc] = useState("");
   const limit = 130;
 
   useEffect(() => {
@@ -35,24 +35,25 @@ const Description = ({ pic }) => {
       pic.description.match(/\n/)
     ) {
       setIsTruncated(true);
+      let truncatedDesc = ""
       const words = pic.description.split(/(?= )|(?=\n)|(?=$)/);
       let i = 0;
       while (
         i < words.length &&
         !words[i].match(/\n/) &&
-        pic.user.username.length + renderedDesc.current.length < limit
+        pic.user.username.length + truncatedDesc.length < limit
       ) {
-        renderedDesc.current += words[i];
+        truncatedDesc += words[i];
         i++;
       }
+      setRenderedDesc(truncatedDesc)
+    } else {
+      setRenderedDesc(pic.description)
     }
-    return () => {
-      renderedDesc.current = "";
-    };
   }, [pic]);
 
   const handleOnClick = () => {
-    renderedDesc.current = pic.description;
+    setRenderedDesc(pic.description);
     setIsTruncated(false);
   };
 
@@ -69,7 +70,7 @@ const Description = ({ pic }) => {
   return (
     <Section>
       <Bold>{`${pic.user.username} `}</Bold>
-      {`${renderedDesc.current}`}
+      {renderedDesc}
       {isTruncated && renderEllipses()}
     </Section>
   );
