@@ -26,6 +26,7 @@ const Avatar = styled.i`
   font-size: 22px;
   margin: 0 4px;
   text-align: center;
+  cursor: pointer;
 `
 
 const IconContainer = () => {
