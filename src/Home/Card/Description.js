@@ -1,12 +1,8 @@
 import React from "react";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
-import Section from "./Section";
-
-const Bold = styled.span`
-  font-size: 14px;
-  font-weight: 600;
-`;
+import Bold from "./Bold";
+import { OuterWrapper, InnerWrapper } from './CommentsContainer'
 
 const Span = styled.span`
   white-space: nowrap;
@@ -68,11 +64,13 @@ const Description = ({ pic }) => {
   };
 
   return (
-    <Section>
-      <Bold>{`${pic.user.username} `}</Bold>
-      {renderedDesc}
-      {isTruncated && renderEllipses()}
-    </Section>
+    <OuterWrapper>
+      <InnerWrapper>
+        <Bold>{`${pic.user.username} `}</Bold>
+        {renderedDesc}
+        {isTruncated && renderEllipses()}
+      </InnerWrapper>
+    </OuterWrapper>
   );
 };
 
