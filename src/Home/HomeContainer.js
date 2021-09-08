@@ -20,7 +20,7 @@ const Div = styled.div`
   flex-grow: 1;
 `
 
-const FeedContainer = styled.div`
+const Wrapper = styled.div`
   width: 100%;
   max-width: 615px;
 `
@@ -32,7 +32,7 @@ const HomeContainer = () => {
 
   return(
     <Div id="home-container">
-      <FeedContainer>
+      <Wrapper>
         {pics.map((pic, index) => {
           if(index === pics.length - 1){
             return <Card key={pic.imgur_id} ref={lastCardRef} pic={pic}/>
@@ -41,7 +41,7 @@ const HomeContainer = () => {
           }
         })}
         {loading && <div>Loading</div>}
-      </FeedContainer>
+      </Wrapper>
     </Div>
 
   )
