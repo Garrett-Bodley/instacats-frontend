@@ -10,6 +10,7 @@ const NavbarIcon = styled.svg.attrs((props) => ({
   display: block;
   margin: 0 4px;
   position: relative;
+  cursor: pointer;
 `;
 
 export const ActivityFeed = () => {
