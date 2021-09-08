@@ -11,11 +11,15 @@ const Container = styled.div`
   flex: 1 9999 0%;
 `
 
+const Img = styled.img`
+  cursor: pointer;
+`
+
 const LogoContainer = () => {
 
   return(
     <Container id="logo-container">
-      <img alt="Instacats Logo" aria-label="Instacats" src={logo} />
+      <Img alt="Instacats Logo" aria-label="Instacats" src={logo} />
     </Container>
   )
 
