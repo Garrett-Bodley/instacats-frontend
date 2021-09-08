@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Content from "./Content";
 import Avatar from "../../Icons/Avatar";
 import LikesSection from "./LikesSection";
-import Description from "./Description";
+import CommentsContainer from "./CommentsContainer";
 import {
   LikeButton,
   CommentButton,
@@ -71,8 +71,8 @@ const Card = React.forwardRef((props, ref) => {
           <BookmarkButton />
         </BookmarkButtonWrapper>
       </IconBar>
-      <LikesSection likes={props.pic.likes} />
-      {props.pic.description.length !== 0 && <Description pic={props.pic} />}
+      { props.pic.likes > 0 && <LikesSection likes={props.pic.likes} /> }
+      <CommentsContainer pic={props.pic} />
     </Article>
   );
 });
