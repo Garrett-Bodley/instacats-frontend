@@ -1157,7 +1157,7 @@
     "core-js-pure" "^3.0.0"
     "regenerator-runtime" "^0.13.4"
 
-"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.5", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.14.0", "@babel/runtime@^7.14.6", "@babel/runtime@^7.14.8", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.1.2", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.5", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.1", "@babel/runtime@^7.12.5", "@babel/runtime@^7.13.10", "@babel/runtime@^7.14.0", "@babel/runtime@^7.14.6", "@babel/runtime@^7.15.3", "@babel/runtime@^7.5.5", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   "integrity" "sha512-OvwMLqNXkCXSz1kSm58sEsNuhqOx/fKpnUnKnFB5v8uDda5bLNEHNgKPvhDN6IU0LDcnHQ90LlJ0Q6jnyBSIBA=="
   "resolved" "https://registry.npmjs.org/@babel/runtime/-/runtime-7.15.3.tgz"
   "version" "7.15.3"
@@ -1587,36 +1587,36 @@
     "@babel/runtime" "^7.14.0"
     "@styled-icons/styled-icon" "^10.6.3"
 
-"@styled-icons/boxicons-logos@10.37.0":
-  "integrity" "sha512-+WVbzxZ9DcGk5iLQLWGfgTVwBX0mr4x0GlTeOXlXmgNXcMTyfJtRr5A2JP1qPDIa04K/+RDQt9eA5VOasK1pbA=="
-  "resolved" "https://registry.npmjs.org/@styled-icons/boxicons-logos/-/boxicons-logos-10.37.0.tgz"
-  "version" "10.37.0"
+"@styled-icons/boxicons-logos@10.38.0":
+  "integrity" "sha512-DpkUi9qV76RsyuzihQhfCho142WCxK/2oUfjcqo6BsP92qxV+4rtS5nfVsmqfnSEef4av+qSeg33fJWDyURyKg=="
+  "resolved" "https://registry.npmjs.org/@styled-icons/boxicons-logos/-/boxicons-logos-10.38.0.tgz"
+  "version" "10.38.0"
   dependencies:
-    "@babel/runtime" "^7.14.8"
+    "@babel/runtime" "^7.15.3"
     "@styled-icons/styled-icon" "^10.6.3"
 
-"@styled-icons/boxicons-regular@10.37.0":
-  "integrity" "sha512-FAa8Nhn/ZABbrKP1lAVGJwphiuFssa2cx0Vv2AsY/RVwy6bL7FNjzq4H9iTMxSWyHAYPT3+sAODgZ9QjH8yIFA=="
-  "resolved" "https://registry.npmjs.org/@styled-icons/boxicons-regular/-/boxicons-regular-10.37.0.tgz"
-  "version" "10.37.0"
+"@styled-icons/boxicons-regular@10.38.0":
+  "integrity" "sha512-xjhafoa0/EeYtQOyTw+ohuSlBx599t8l8++JH1tQlM0l73dP4icTpF4znYL+HhZeaUe3D+UhrkfWuBBua2w2Qw=="
+  "resolved" "https://registry.npmjs.org/@styled-icons/boxicons-regular/-/boxicons-regular-10.38.0.tgz"
+  "version" "10.38.0"
   dependencies:
-    "@babel/runtime" "^7.14.8"
+    "@babel/runtime" "^7.15.3"
     "@styled-icons/styled-icon" "^10.6.3"
 
-"@styled-icons/boxicons-solid@10.37.0":
-  "integrity" "sha512-u6/urwIWesGArSHW98TFHnzMduInQYkhWE1LdNCWkmzs0CvQ0Xmmvnl1Lz9LnAHatQR+UFpKLz2y08Fhu7zBgQ=="
-  "resolved" "https://registry.npmjs.org/@styled-icons/boxicons-solid/-/boxicons-solid-10.37.0.tgz"
-  "version" "10.37.0"
+"@styled-icons/boxicons-solid@10.38.0":
+  "integrity" "sha512-uuMtF1R61smQT5r6HIYMHvpVD0XSErXXNQYl5d6lCtMyefd0gIE5Rw+iD9i/RxHFUHNHbvL69LvitCLtNWrSqw=="
+  "resolved" "https://registry.npmjs.org/@styled-icons/boxicons-solid/-/boxicons-solid-10.38.0.tgz"
+  "version" "10.38.0"
   dependencies:
-    "@babel/runtime" "^7.14.8"
+    "@babel/runtime" "^7.15.3"
     "@styled-icons/styled-icon" "^10.6.3"
 
-"@styled-icons/crypto@10.34.0":
-  "integrity" "sha512-0aJx8M5OM6sob5pJsU9xFPIGKub1FLffuvpb7/o5jIjBkm2RMh3rfXWpbVig1laUqeCunl2DP0iO7M6IJwJV/w=="
-  "resolved" "https://registry.npmjs.org/@styled-icons/crypto/-/crypto-10.34.0.tgz"
-  "version" "10.34.0"
+"@styled-icons/crypto@10.38.0":
+  "integrity" "sha512-SOfJFfofCOgExaRB0u3AA7Fdv2vbFIxtCAmyNDdjqvnTncg4HVPEg5+rysN3oHGiJBF8+uqUdtLerx3rmhYI7g=="
+  "resolved" "https://registry.npmjs.org/@styled-icons/crypto/-/crypto-10.38.0.tgz"
+  "version" "10.38.0"
   dependencies:
-    "@babel/runtime" "^7.14.0"
+    "@babel/runtime" "^7.15.3"
     "@styled-icons/styled-icon" "^10.6.3"
 
 "@styled-icons/entypo-social@10.34.0":
@@ -1659,12 +1659,12 @@
     "@babel/runtime" "^7.14.0"
     "@styled-icons/styled-icon" "^10.6.3"
 
-"@styled-icons/fa-brands@10.34.0":
-  "integrity" "sha512-iXwto4EHe314ThWMJ85ThvlIR5OhzncRSL47Y2dZniGP5/oJcOEcdELclUNlU9I19ggTbNR8c4zQsbrl6C4LCg=="
-  "resolved" "https://registry.npmjs.org/@styled-icons/fa-brands/-/fa-brands-10.34.0.tgz"
-  "version" "10.34.0"
+"@styled-icons/fa-brands@10.38.0":
+  "integrity" "sha512-zZzGkcshXIF55geFIpMzMLH6tSPzQeeFPFZ1RMrZ3TWBjUuquMx+vYFsO7kzq939X84gLjmpkJZsAP9QKJFvMg=="
+  "resolved" "https://registry.npmjs.org/@styled-icons/fa-brands/-/fa-brands-10.38.0.tgz"
+  "version" "10.38.0"
   dependencies:
-    "@babel/runtime" "^7.14.0"
+    "@babel/runtime" "^7.15.3"
     "@styled-icons/styled-icon" "^10.6.3"
 
 "@styled-icons/fa-regular@10.34.0":
@@ -1803,12 +1803,12 @@
     "@babel/runtime" "^7.14.0"
     "@styled-icons/styled-icon" "^10.6.3"
 
-"@styled-icons/octicons@10.35.0":
-  "integrity" "sha512-AIS144KEBVYXyY3Re6WCnP5OlPsz/kh2vHkU2/Nen6tiSz3jmmoLu6i9zZ2yYzdZt1H+bGcCboToicn4gp8gxg=="
-  "resolved" "https://registry.npmjs.org/@styled-icons/octicons/-/octicons-10.35.0.tgz"
-  "version" "10.35.0"
+"@styled-icons/octicons@10.38.0":
+  "integrity" "sha512-pAVbXTNBGjSH1HophztZm2zkrwF3c1c4qpRfWYxebSaTWcmgfd9VqPqmEsxICnq3DyMmS2l0hk1GJ4jPlI01IQ=="
+  "resolved" "https://registry.npmjs.org/@styled-icons/octicons/-/octicons-10.38.0.tgz"
+  "version" "10.38.0"
   dependencies:
-    "@babel/runtime" "^7.14.6"
+    "@babel/runtime" "^7.15.3"
     "@styled-icons/styled-icon" "^10.6.3"
 
 "@styled-icons/open-iconic@10.18.0":
@@ -1843,12 +1843,12 @@
     "@babel/runtime" "^7.10.5"
     "@styled-icons/styled-icon" "^10.6.0"
 
-"@styled-icons/simple-icons@10.37.0":
-  "integrity" "sha512-TXjXsl83YlR66duI+9V2k5eFL4ZyMYtwzh46zX4Txfg+q9cVrxtll1oifbv+6QK5gTPNaT1S6NZ7fseqg2B7jA=="
-  "resolved" "https://registry.npmjs.org/@styled-icons/simple-icons/-/simple-icons-10.37.0.tgz"
-  "version" "10.37.0"
+"@styled-icons/simple-icons@10.38.0":
+  "integrity" "sha512-jmEtDm/1LNDhwNl5ItkWL07gGqAGw/UML2HPNmjS1K9MX0CEMJSXa7aEBtaV8yzRYw3qgh5kTJgFxR9NOYQtNw=="
+  "resolved" "https://registry.npmjs.org/@styled-icons/simple-icons/-/simple-icons-10.38.0.tgz"
+  "version" "10.38.0"
   dependencies:
-    "@babel/runtime" "^7.14.8"
+    "@babel/runtime" "^7.15.3"
     "@styled-icons/styled-icon" "^10.6.3"
 
 "@styled-icons/styled-icon@^10.6.0", "@styled-icons/styled-icon@^10.6.3", "@styled-icons/styled-icon@10.6.3":
@@ -10991,22 +10991,22 @@
     "supports-color" "^5.5.0"
 
 "styled-icons@^10.37.0":
-  "integrity" "sha512-q6GMPWW7v2SzCAR1Un8zC9bWNXgmDsjrBxExV3yDF5TMD4nxH8vI7AAQ43unrAogmvCAfp1cXd8Xxxjiz2LOmQ=="
-  "resolved" "https://registry.npmjs.org/styled-icons/-/styled-icons-10.37.0.tgz"
-  "version" "10.37.0"
+  "integrity" "sha512-F1xwM+00pdZX7v2u72Tb1umz0Qd1XlvpMKXc3lxeh/fzIcDrM7KLw+7LpEVyNs7Ztc4orJrYWAmmGF4RyxYcQg=="
+  "resolved" "https://registry.npmjs.org/styled-icons/-/styled-icons-10.38.0.tgz"
+  "version" "10.38.0"
   dependencies:
-    "@babel/runtime" "^7.14.8"
+    "@babel/runtime" "^7.15.3"
     "@styled-icons/bootstrap" "10.34.0"
-    "@styled-icons/boxicons-logos" "10.37.0"
-    "@styled-icons/boxicons-regular" "10.37.0"
-    "@styled-icons/boxicons-solid" "10.37.0"
-    "@styled-icons/crypto" "10.34.0"
+    "@styled-icons/boxicons-logos" "10.38.0"
+    "@styled-icons/boxicons-regular" "10.38.0"
+    "@styled-icons/boxicons-solid" "10.38.0"
+    "@styled-icons/crypto" "10.38.0"
     "@styled-icons/entypo" "10.34.0"
     "@styled-icons/entypo-social" "10.34.0"
     "@styled-icons/evaicons-outline" "10.34.0"
     "@styled-icons/evaicons-solid" "10.34.0"
     "@styled-icons/evil" "10.34.0"
-    "@styled-icons/fa-brands" "10.34.0"
+    "@styled-icons/fa-brands" "10.38.0"
     "@styled-icons/fa-regular" "10.34.0"
     "@styled-icons/fa-solid" "10.34.0"
     "@styled-icons/feather" "10.34.0"
@@ -11024,12 +11024,12 @@
     "@styled-icons/material-rounded" "10.34.0"
     "@styled-icons/material-sharp" "10.34.0"
     "@styled-icons/material-twotone" "10.34.0"
-    "@styled-icons/octicons" "10.35.0"
+    "@styled-icons/octicons" "10.38.0"
     "@styled-icons/open-iconic" "10.18.0"
     "@styled-icons/remix-editor" "10.33.0"
     "@styled-icons/remix-fill" "10.18.0"
     "@styled-icons/remix-line" "10.18.0"
-    "@styled-icons/simple-icons" "10.37.0"
+    "@styled-icons/simple-icons" "10.38.0"
     "@styled-icons/styled-icon" "10.6.3"
     "@styled-icons/typicons" "10.18.0"
     "@styled-icons/zondicons" "10.18.0"
