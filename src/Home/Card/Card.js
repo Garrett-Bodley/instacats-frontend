@@ -4,6 +4,7 @@ import Content from "./Content";
 import Avatar from "../../Icons/Avatar";
 import LikesSection from "./LikesSection";
 import CommentsContainer from "./CommentsContainer";
+import CommentForm from "./CommentForm";
 import {
   LikeButton,
   CommentButton,
@@ -73,6 +74,7 @@ const Card = React.forwardRef((props, ref) => {
       </IconBar>
       { props.pic.likes > 0 && <LikesSection likes={props.pic.likes} /> }
       <CommentsContainer pic={props.pic} />
+      <CommentForm />
     </Article>
   );
 });
